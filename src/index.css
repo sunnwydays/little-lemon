@@ -21,13 +21,23 @@ markazi 24 bold
   font-size: 24px;
 */
 
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid black;
+  width: 100vw;
+}
 
 body {
   display: flex;
   flex-direction: column;
-  max-width: 80vw;
   margin: 0 auto;
   font-family: "Karla", sans-serif;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
 }
 
 h1 {
@@ -42,9 +52,20 @@ h1 {
   font-size: 32px;
 }
 
+button {
+  font-family: "Karla", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  background-color: rgb(244, 206, 20);
+  border: none;
+  border-radius: 16px;
+  width: 204px;
+  height: 54px;
+}
+
 nav {
   background-color: #fff;
-  padding: 2rem 1rem 2rem 0; /* Adjust as needed */
+  padding: 2rem 1rem 2rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,4 +119,44 @@ footer div {
 }
 footer h3 {
   color: #495E57;
+}
+
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #495E57;
+  border: 10px solid black;
+}
+
+.hero img {
+  width: 375px;
+  height: 375px;
+}
+.hero > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+.hero h1 {
+  text-align: left;
+  color: #C3A510;
+  margin: 0;
+  line-height: 0.7;
+}
+.hero h2 {
+  text-align: left;
+  color: white;
+  margin: 0;
+
+
+}
+.hero p {
+  text-align: left;
+  max-width: 422px;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
 }

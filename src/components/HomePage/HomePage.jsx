@@ -7,22 +7,22 @@ export default function Home() {
     const specials = [
         {
             name: "Greek Salad",
-            description: "This is a special description",
-            price: 10.99,
-            image: "https://via.placeholder.com/150"
+            description: "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. ",
+            price: 12.99,
+            image: "../../assets/greek-salad.jpg"
         },
         {
             name: "Bruchetta",
-            description: "This is a special description",
-            price: 12.99,
-            image: "https://via.placeholder.com/150"
+            description: "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil. ",
+            price: 5.99,
+            image: "../../assets/bruchetta.svg"
 
         },
         {
             name: "Lemon Desert",
-            description: "This is a special description",
+            description: "This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
             price: 5.00,
-            image: "https://via.placeholder.com/150"
+            image: "../../assets/lemon dessert.jpg"
 
         }
     ]
@@ -46,9 +46,9 @@ export default function Home() {
     return (
         <div>
             <Hero />
-            <div>
+            <div className="specials">
                 <div>
-                    <h1>This week's specials!</h1>
+                    <h1>This week&apos;s specials!</h1>
                     <button>Online Menu</button>
                 </div>
                 <div>
@@ -57,7 +57,7 @@ export default function Home() {
                     ))}
                 </div>
             </div>
-            <div>
+            <div className="testimonials">
                 <h2>Testimonials</h2>
                 {reviews.map((review, index) => (
                     <RatingCard key={index} review={review} />

@@ -8,6 +8,7 @@ export default function Main() {
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/reservations" element={<BookingPage />} />
+                {/* home, about, menu, reservations, order online, login*/}
             </Routes>
         </BrowserRouter>
     );
