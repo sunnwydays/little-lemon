@@ -2,7 +2,7 @@ import chef from '../../assets/chef vertical.jpg';
 
 export default function BrandDescription() {
     return (
-        <div>
+        <div className="brand-description">
             <div>
                 <h1>Little Lemon</h1>
                 <p className="markazi-32">Chicago</p>
