@@ -7,7 +7,7 @@ export default function Main() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/booking" element={<BookingPage />} />
+                <Route path="/reservations" element={<BookingPage />} />
             </Routes>
         </BrowserRouter>
     );
