@@ -5,7 +5,7 @@ export default function Footer() {
         <footer>
             <div>
                 <div>
-                    <img src={image} width="156" alt="Mario and Adrian" />
+                    <img src={image} alt="Mario and Adrian" />
                 </div>
                 <div>
                     <h3>Navigation</h3>

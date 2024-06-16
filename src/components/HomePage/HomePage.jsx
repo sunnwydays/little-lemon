@@ -6,6 +6,10 @@ import BrandDescription from "./BrandDescription";
 import greekSaladImage from "../../assets/greek salad.jpg";
 import bruchettaImage from "../../assets/bruchetta.svg";
 import lemonDessertImage from "../../assets/lemon dessert.jpg";
+import customer1 from "../../assets/customer1.jpeg";
+import customer2 from "../../assets/customer2.jpeg";
+import customer3 from "../../assets/customer3.jpeg";
+import customer4 from "../../assets/customer4.jpeg";
 
 export default function Home() {
     const specials = [
@@ -33,22 +37,22 @@ export default function Home() {
     const testimonials = [
         {
             name: "John Doe",
-            image: "🌟🌟🌟🌟🌟",
+            image: customer1,
             comments: "This is a review"
         },
         {
             name: "Jane Doe",
-            image: "🌟🌟🌟🌟🌟",
+            image: customer2,
             comments: "This is a review"
         },
         {
             name: "John Smith",
-            image: "🌟🌟🌟🌟🌟",
+            image: customer3,
             comments: "This is a review"
         },
         {
             name: "Jane Smith",
-            image: "🌟🌟🌟🌟🌟",
+            image: customer4,
             comments: "This is a review"
         }
     ]
