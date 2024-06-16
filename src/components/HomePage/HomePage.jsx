@@ -1,6 +1,6 @@
 import Hero from "./Hero";
-import SpecialCard from "./SpecialCard";
-import RatingCard from "./RatingCard";
+import Specials from "./Specials";
+import Ratings from "./Ratings";
 import BrandDescription from "./BrandDescription";
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
 
         }
     ]
-    const reviews = [
+    const ratings = [
         {
             name: "John Doe",
             image: "🌟🌟🌟🌟🌟",
@@ -41,28 +41,18 @@ export default function Home() {
             name: "John Smith",
             image: "🌟🌟🌟🌟🌟",
             comments: "This is a review"
+        },
+        {
+            name: "Jane Smith",
+            image: "🌟🌟🌟🌟🌟",
+            comments: "This is a review"
         }
     ]
     return (
         <div>
             <Hero />
-            <div className="specials">
-                <div>
-                    <h1>This week&apos;s specials!</h1>
-                    <button>Online Menu</button>
-                </div>
-                <div>
-                    {specials.map((special, index) => (
-                        <SpecialCard key={index} dish={special} />
-                    ))}
-                </div>
-            </div>
-            <div className="testimonials">
-                <h2>Testimonials</h2>
-                {reviews.map((review, index) => (
-                    <RatingCard key={index} review={review} />
-                ))}
-            </div>
+            <Specials specials={specials} />
+            <Ratings ratings={ratings} />
             <BrandDescription />
         </div>
     )

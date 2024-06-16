@@ -1,12 +1,12 @@
-export default function SpecialCard({ dish }) {
+export default function SpecialCard({ special }) {
     return (
         <div>
-            <img src={dish.image} alt={dish.name} />
+            <img src={special.image} alt={special.name} />
             <div>
-                <h3>{dish.name}</h3>
-                <p>${dish.price}</p>
+                <h3>{special.name}</h3>
+                <p>${special.price}</p>
             </div>
-            <p>{dish.description}</p>
+            <p>{special.description}</p>
             <p>Order a delivery 🚲</p>
         </div>
     )

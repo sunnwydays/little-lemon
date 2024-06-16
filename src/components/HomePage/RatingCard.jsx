@@ -1,12 +1,12 @@
-export default function RatingCard({ review }) {
+export default function RatingCard({ rating }) {
     return (
         <div className="rating-card">
             <p>Rating</p>
             <div>
-                <p>{review.image}</p>
-                <p>{review.name}</p>
+                <p>{rating.image}</p>
+                <p>{rating.name}</p>
             </div>
-            <p>{review.comments}</p>
+            <p>{rating.comments}</p>
         </div>
     )
 }

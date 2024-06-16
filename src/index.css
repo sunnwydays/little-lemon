@@ -30,11 +30,6 @@ markazi 24 bold
   width: 100vw;
 } */
 
-.content {
-  max-width: 80vw;
-  margin: 0 auto;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -42,7 +37,6 @@ body {
   font-family: "Karla", sans-serif;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
 }
 
 h1 {
@@ -61,7 +55,7 @@ button {
   font-family: "Karla", sans-serif;
   font-weight: 600;
   font-size: 20px;
-  background-color: rgb(244, 206, 20);
+  background-color: #f4ce14;
   border: none;
   border-radius: 16px;
   width: 204px;
@@ -69,7 +63,8 @@ button {
 }
 
 nav {
-  background-color: #fff;
+  max-width: 80vw;
+  margin: 0 auto;
   padding: 2rem 1rem 2rem 0;
   display: flex;
   justify-content: space-between;
@@ -111,11 +106,15 @@ nav a {
 }
 
 footer {
+  background-color: #EDEFEE;
+}
+footer > div {
+  max-width: 80vw;
+  margin: 1rem auto 0 auto;
   display: flex;
   text-align: left;
   flex-wrap: wrap;
   margin-top: 1rem;
-  background-color: #D9D9D9;
   padding: 3rem;
   align-self: center;
 }
@@ -126,24 +125,28 @@ footer h3 {
   color: #495E57;
 }
 
-
+/* HomePage */
 .hero {
+  background-color: #495E57;
+}
+.hero > div {
+  max-width: 80vw;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #495E57;
-  border: 10px solid black;
 }
 
 .hero img {
-  width: 375px;
-  height: 375px;
+  width: 400px;
+  height: 400px;
+  margin: 2rem;
+
 }
-.hero > div {
+.hero > div > div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid black;
 }
 .hero h1 {
   text-align: left;
@@ -155,19 +158,81 @@ footer h3 {
   text-align: left;
   color: white;
   margin: 0;
-
-
 }
 .hero p {
   text-align: left;
-  max-width: 422px;
+  max-width: 320px ;
   font-size: 20px;
   font-weight: 500;
   color: white;
+  margin: 2rem 0;
 }
 
+.specials > div {
+  /* max-width: 80vw; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.specials h1 {
+  margin: 0;
+  line-height: 0.7;
+  width: 100%;
+}
+.specials > div > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.testimonials {
+  background-color: #EDEFEE;
+}
+.testimonials > div {
+  max-width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.testimonials h1 {
+  text-align: center;
+  margin: 0;
+  line-height: 0.7;
+  width: 100%;
+}
+.testimonials > div > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand-description > div {
+  max-width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .brand-description img {
   width: 300px;
 }
-
-/* put basic formatting on everything first */
+.brand-description > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.brand-description h1 {
+  text-align: left;
+  margin: 0;
+  line-height: 0.7;
+}
+.brand-description h2 {
+  text-align: left;
+  margin: 0;
+}
+.brand-description p {
+  text-align: justify;
+  max-width: 470px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 2rem 0;
+  color: #333;
+}
