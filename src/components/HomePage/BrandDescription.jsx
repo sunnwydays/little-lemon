@@ -1,4 +1,4 @@
-import chef from '../../assets/chef vertical.jpg';
+import chef from '../../assets/restaurant chef B.jpg';
 
 export default function BrandDescription() {
     return (

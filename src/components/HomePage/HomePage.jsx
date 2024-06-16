@@ -1,8 +1,6 @@
 import Hero from "./Hero";
-import Specials from "./Specials";
 import SpecialCard from "./SpecialCard";
-import Ratings from "./Ratings";
-import RatingCard from "./RatingCard";
+import TestimonialCard from "./TestimonialCard";
 import BrandDescription from "./BrandDescription";
 
 import greekSaladImage from "../../assets/greek salad.jpg";
@@ -32,7 +30,7 @@ export default function Home() {
 
         }
     ]
-    const ratings = [
+    const testimonials = [
         {
             name: "John Doe",
             image: "🌟🌟🌟🌟🌟",
@@ -57,7 +55,6 @@ export default function Home() {
     return (
         <div className="homepage">
             <Hero />
-            {/* <Specials specials={specials} /> */}
             <section className="specials">
                 <div>
                     <div>
@@ -71,13 +68,12 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            {/* <Ratings ratings={ratings} /> */}
             <section className="testimonials">
                 <div>
                     <h1>Testimonials</h1>
                     <div>
-                        {ratings.map((rating, index) => (
-                            <RatingCard key={index} rating={rating} />
+                        {testimonials.map((testimonial, index) => (
+                            <TestimonialCard key={index} testimonial={testimonial} />
                         ))}
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-import food from '../../assets/restauranfood square.jpg';
+import food from '../../assets/restauranfood.jpg';
 
 export default function Hero() {
     return (
