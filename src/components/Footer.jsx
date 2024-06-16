@@ -1,20 +1,20 @@
-import image from '../assets/Mario and Adrian vertical.jpg';
+import image from '../assets/Mario and Adrian new.jpg';
 
 export default function Footer() {
     return (
         <footer>
-            <div>
+            <div className="content">
                 <div>
                     <img src={image} alt="Mario and Adrian" />
                 </div>
                 <div>
                     <h3>Navigation</h3>
-                    <p>Home</p>
-                    <p>About</p>
-                    <p>Menu</p>
-                    <p>Reservations</p>
-                    <p>Order Online</p>
-                    <p>Login</p>
+                    <p><a href="/">Home</a></p>
+                    <p><a href="/about">About</a></p>
+                    <p><a href="/menu">Menu</a></p>
+                    <p><a href="/reservations">Reservations</a></p>
+                    <p><a href="/order-online">Order Online</a></p>
+                    <p><a href="/login">Login</a></p>
                 </div>
                 <div>
                     <h3>Contact</h3>

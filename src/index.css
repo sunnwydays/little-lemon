@@ -63,6 +63,10 @@ body {
    */
 }
 
+.content {
+  max-width: 60vw;
+}
+
 h1 {
   font-family: "Markazi Text", serif;
   font-weight: 500;
@@ -79,15 +83,22 @@ button {
   font-family: "Karla", sans-serif;
   font-weight: 600;
   font-size: 20px;
-  background-color: #f4ce14;
+  background-color: hsl(50, 91%, 52%);
   border: none;
-  border-radius: 16px;
-  width: 204px;
-  height: 54px;
+  border-radius: 1rem;
+  width: 12.75rem;
+  height: 3.375rem;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: hsl(50, 91%, 42%);
+}
+button:active {
+  background-color: hsl(50, 91%, 82%);
 }
 
 nav {
-  max-width: 70vw;
+  max-width: 60vw;
   margin: 0 auto;
   padding: 2rem 1rem 2rem 0;
   display: flex;
@@ -112,35 +123,25 @@ nav ul li {
 }
 
 nav a {
-  text-decoration: none;
   color: #333;
-  &:hover {
-      color: #007bff;
-  }
 }
 
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: left;
-  }
-  nav ul li {
-    margin: 0.5rem 0;
-  }
+a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+a:hover {
+  color: hsl(211, 100%, 70%);
 }
 
 footer {
   background-color: #EDEFEE;
 }
 footer > div {
-  max-width: 70vw;
   margin: 1rem auto 0 auto;
   display: flex;
-  text-align: left;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-  padding: 3rem;
-  align-self: center;
+  padding: 3rem 0;
 }
 footer div {
   flex: 1 1 auto;
@@ -149,8 +150,11 @@ footer h3 {
   color: #495E57;
 }
 footer img {
-  width: 156px;
-  border-radius: 16px;
+  width: 13rem;
+  height: 20rem;
+  object-fit: cover;
+  object-position: 70% 0;
+  border-radius: 1rem;
 }
 
 /* HomePage */
@@ -158,19 +162,18 @@ footer img {
   background-color: #495E57;
 }
 .hero > div {
-  max-width: 70vw;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .hero img {
-  width: 400px;
-  height: 500px;
+  width: 30rem;
+  height: 31rem;
   object-fit: cover;
   object-position: center;
   margin: 2rem 0 -4rem 0;
-  border-radius: 16px;
+  border-radius: 1rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 .hero > div > div {
@@ -191,7 +194,7 @@ footer img {
 }
 .hero p {
   text-align: left;
-  max-width: 300px ;
+  max-width: 16vw;
   font-size: 20px;
   font-weight: 500;
   color: white;
@@ -202,7 +205,6 @@ footer img {
   padding: 7rem 0 4rem 0;
 }
 .specials > div {
-  max-width: 70vw;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -222,6 +224,10 @@ footer img {
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   background-color: #EDEFEE;
+  width: 17.5vw;
+}
+.special-card > div {
+  padding: 1.5rem;
 }
 .special-card > div > div {
   display: flex;
@@ -229,15 +235,16 @@ footer img {
   align-items: center;
 }
 .special-card img {
-  width: 250px;
-  height: 170px;
+  width: 17.5vw;
+  height: 12vw;
   object-fit: cover;
   object-position: center;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
-.special-card > div > p {
+.special-card > div > p:first-of-type {
   color: #333;
+  min-height: 6rem;
 }
 .special-card > div > div > p {
   font-family: "Markazi Text", serif;
@@ -258,7 +265,6 @@ footer img {
   padding: 10rem 0 15rem 0;
 }
 .testimonials > div {
-  max-width: 70vw;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -272,20 +278,24 @@ footer img {
   justify-content: space-between;
   overflow-x: auto;
 }
+
 .testimonial-card {
+  width: 14vw;
+}
+.testimonial-card > div{
   display: flex;
   flex-direction: column;
   background-color: white;
-  padding: 2rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
 }
 .testimonial-card img {
-  width: 100px;
-  height: 100px;
-  border-radius: 16px;
+  margin: 1rem 1rem 0 0;
 }
-.testimonial-card > div {
+.testimonial-card > div > div {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0; 
 }
 .testimonial-card h3 {
   font-family: "Karla", sans-serif;
@@ -293,20 +303,18 @@ footer img {
   font-size: 16px;
   margin: 0;
 }
-.testimonial-card > div {
-  align-items: center;
-}
-.testimonial-card > div > h3 {
+.testimonial-card > div > div > h3 {
   font-family: "Karla", sans-serif;
   font-weight: 700;
-  font-size: 16px;
+}
+.testimonial-card > div > p {
+  margin: 0.7rem 0 0.2rem 0;
 }
 
 .brand-description {
   padding: 6rem 0;
 }
 .brand-description > div {
-  max-width: 70vw;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -314,21 +322,21 @@ footer img {
   position: relative;
 }
 .brand-description img {
-  width: 330px;
-  height: 370px;
+  width: 20rem;
+  height: 23rem;
   object-fit: cover;
   object-position: center;
-  border-radius: 16px;
+  border-radius: 1rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   position: absolute;
 }
 .brand-description img:first-of-type {
-  right: 250px;
-  bottom: -4rem;
+  left: 30vw;
+  top: 3rem;
   z-index: -1;
 }
 .brand-description img:last-of-type {
-  right: 0px;
+  left: 43vw;
 }
 
 .brand-description > div > div {
@@ -346,9 +354,41 @@ footer img {
 }
 .brand-description p {
   text-align: justify;
-  max-width: 470px;
+  max-width: 24vw;
   font-size: 18px;
   font-weight: 500;
   margin: 2rem 0;
   color: #333;
+}
+@media (max-width: 1250px) {
+  content {
+    max-width: 80vw;
+  }
+  nav ul li {
+    margin: 0 1rem;
+  }
+}
+@media (max-width: 800px) {
+  content {
+    max-width: 95vw;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: left;
+  }
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+  footer > div {
+    flex-direction: column;
+  }
+}
+
+
+/* BookingPage */
+
+
+/* OtherPages */
+.other-page {
+  margin: 0 auto 4rem auto;
 }

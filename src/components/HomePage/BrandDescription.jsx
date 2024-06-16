@@ -4,7 +4,7 @@ import restaurant from '../../assets/restaurant.jpg';
 export default function BrandDescription() {
     return (
         <section className="brand-description">
-            <div>
+            <div className="content">
                 <div>
                     <h1>Little Lemon</h1>
                     <h2 className="markazi-32">Chicago</h2>

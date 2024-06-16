@@ -2,8 +2,8 @@ import logo from '../assets/Logo.svg';
 
 export default function Nav() {
     return (
-        <nav className="content">q
-            <img src={logo} alt="Little Lemon logo"/>
+        <nav>
+            <a href="/"><img src={logo} alt="Little Lemon logo" /></a>
             <ul>
                 <li>
                     <a href="/">Home</a>
