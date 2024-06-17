@@ -510,7 +510,9 @@ footer img {
 
 
 /* BookingPage */
-
+.booking-page {
+  margin: 0 auto;
+}
 
 /* OtherPages */
 .other-page {
