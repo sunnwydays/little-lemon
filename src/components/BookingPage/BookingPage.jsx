@@ -3,7 +3,7 @@ import { useReducer } from 'react';
 import BookingForm from "./BookingForm"
 import restaurant from '../../assets/restaurant.jpg';
 
-export default function BookingPage() {
+export default function BookingPage(props) {
     const reducer = (state, action) => {
         switch (action.type) {
             case 'SET_DATE':
@@ -41,6 +41,8 @@ export default function BookingPage() {
                 <BookingForm
                     state={state}
                     dispatch={dispatch}
+                    availableTimes={props.availableTimes}
+                    availableTimesDispatch={props.dispatch}
                 />
                 <p>fname</p>
                 <p>lname</p>

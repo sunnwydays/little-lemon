@@ -1,4 +1,4 @@
-export default function BookingForm({ state, dispatch }) {
+export default function BookingForm({ state, dispatch, availableTimes, availableTimesDispatch }) {
     const handleChange = (e) => {
         const { id, value } = e.target;
         let actionType = '';
@@ -34,14 +34,11 @@ export default function BookingForm({ state, dispatch }) {
 
             <label htmlFor="time">Choose time</label>
             <select id="time" value={state.time} onChange={handleChange}>
-                <option>17:00</option>
-                <option>18:00</option>
-                <option>19:00</option>
-                <option>20:00</option>
-                <option>21:00</option>
-                <option>22:00</option>
-            </select>
+                {availableTimes.map(time => (
+                    <option key={time}>{time}</option>
+                ))}
 
+            </select>
             <label htmlFor="numDiners">Number of guests</label>
             <input
                 type="number"
