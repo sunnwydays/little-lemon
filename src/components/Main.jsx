@@ -17,7 +17,8 @@ const updateTimes = (state, action) => {
 };
 
 const initializeTimes = () => {
-    return ['17:00', '18:00', '19:00'];
+    const today = new Date();
+    return fetchAPI(today);
 };
 
 export default function Main() {

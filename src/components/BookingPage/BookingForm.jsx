@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function BookingForm({ state, dispatch, availableTimes, availableTimesDispatch }) {
     const handleChange = (e) => {
         const { id, value } = e.target;
@@ -59,3 +61,7 @@ export default function BookingForm({ state, dispatch, availableTimes, available
         </form>
     );
 }
+
+// fetchAPI(date) - This function accepts a date as a parameter and returns an array of available reservation times for the provided date 
+
+// submitAPI(formData) - This function accepts the booking form data as a parameter and will return true if the data was successfully submitted.
