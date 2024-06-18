@@ -1,9 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import React from 'react';
 import BookingForm from './BookingForm';
 
-test('Renders the BookingForm heading', () => {
+test('Renders the BookingForm submit button', () => {
     render(<BookingForm />);
-    const headingElement = screen.getByText("Occasion");
-    expect(headingElement).toBeInTheDocument();
-})
+    const submitButton = screen.getByValue("Make Your reservation");
+    expect(submitButton).toBeInTheDocument();
+});

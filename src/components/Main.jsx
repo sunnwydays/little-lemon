@@ -6,7 +6,7 @@ import Menu from './OtherPages/Menu';
 import BookingPage from './BookingPage/BookingPage';
 import OrderOnline from './OtherPages/OrderOnline';
 import Login from './OtherPages/Login';
-import BookingConfirmation from './BookingPage/BookingConfirmation';
+import ConfirmedBooking from './BookingPage/ConfirmedBooking';
 
 export default function Main() {
     /* seededRandom, fetchAPI, submitAPI provided by the API */
@@ -37,8 +37,13 @@ export default function Main() {
         return true;
     };
 
-    const updateTimes = (availableTimes, date) => {
-        return { availableTimes: fetchAPI(new Date()) }
+    const updateTimes = (state, action) => {
+        switch (action.type) {
+            case 'UPDATE_TIMES':
+                return fetchAPI(action.date);
+            default:
+                return state;
+        }
     };
     const initializeTimes = () => {
         const today = new Date()
@@ -46,12 +51,11 @@ export default function Main() {
     };
 
     const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
-    const initialState = { availableTimes: fetchAPI(new Date()) }
 
     const navigate = useNavigate()
     function submitForm(formData) {
         if (submitAPI(formData)) {
-            navigate('/confirmation')
+            navigate('/confirmed')
         }
     }
 
@@ -65,7 +69,7 @@ export default function Main() {
                 <Route path="/menu" element={<Menu />} />
                 <Route path="/order-online" element={<OrderOnline />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/confirmation" element={<BookingConfirmation />} />
+                <Route path="/confirmed" element={<ConfirmedBooking />} />
             </Routes>
         </main>
     );

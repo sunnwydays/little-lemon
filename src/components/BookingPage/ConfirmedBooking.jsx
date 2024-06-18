@@ -1,4 +1,4 @@
-export default function BookingConfirmation() {
+export default function ConfirmedBooking() {
     return (
         <div className="content other-page">
             <h1>Thank you for your reservation!</h1>

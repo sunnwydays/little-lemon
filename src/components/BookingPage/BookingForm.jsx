@@ -1,19 +1,26 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
+
+BookingForm.propTypes = {
+    availableTimes: PropTypes.array,
+    dispatch: PropTypes.func,
+    submitForm: PropTypes.func
+};
 
 export default function BookingForm({ availableTimes, dispatch, submitForm }) {
     const [date, setDate] = useState('')
     const [time, setTime] = useState('')
     const [guests, setGuests] = useState('')
-    const [occasion, setOccasion] = useState('')
+    const [occasion, setOccasion] = useState('')    //may need default values
     
     const handleDateChange = (e) => {
-        setDate(e.target.value)
-        props.dispatch(e.target.value)
+        const newDate = new Date(e.target.value)
+        setDate(newDate.toISOString().split('T')[0])
+        dispatch({ type: 'UPDATE_TIMES', date: newDate })
     };
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(availableTimes)
         submitForm(e)
     };
 
@@ -24,11 +31,12 @@ export default function BookingForm({ availableTimes, dispatch, submitForm }) {
 
             <label htmlFor="time">Choose time</label>
             <select id="time" value={time} onChange={e => setTime(e.target.value)}>
+                {/* {console.log("avail", availableTimes)} */}
                 {availableTimes.map(time => (
                     <option key={time}>{time}</option>
                 ))}
-
             </select>
+
             <label htmlFor="guests">Number of guests</label>
             <input
                 type="number"
@@ -49,7 +57,3 @@ export default function BookingForm({ availableTimes, dispatch, submitForm }) {
         </form>
     );
 }
-
-// fetchAPI(date) - This function accepts a date as a parameter and returns an array of available reservation times for the provided date 
-
-// submitAPI(formData) - This function accepts the booking form data as a parameter and will return true if the data was successfully submitted.

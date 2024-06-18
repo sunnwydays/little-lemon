@@ -9,7 +9,7 @@ export default function App() {
     <>
       <Nav />
       <BrowserRouter>
-      <Main />
+        <Main />
       </BrowserRouter>
       <Footer />
     </>

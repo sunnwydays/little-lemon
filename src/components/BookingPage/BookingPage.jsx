@@ -1,5 +1,12 @@
 import BookingForm from "./BookingForm"
 import restaurant from '../../assets/restaurant.jpg';
+import PropTypes from 'prop-types';
+
+BookingPage.propTypes = {
+    availableTimes: PropTypes.array,
+    dispatch: PropTypes.func,
+    submitForm: PropTypes.func
+};
 
 export default function BookingPage(props) {
     return (
