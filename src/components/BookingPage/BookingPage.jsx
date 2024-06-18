@@ -20,18 +20,13 @@ export default function BookingPage(props) {
                     <img src={restaurant} alt="restaurant" />
                 </div>
             </div>
-            <div className="content">
+            <div className="content other-page">
                 <BookingForm
                     availableTimes={props.availableTimes}
                     dispatch={props.dispatch}
                     submitForm={props.submitForm}
                 />
-                <p>fname</p>
-                <p>lname</p>
-                <p>phone email</p>
             </div>
-
-            <button>Reserve</button>
         </div>
     );
 }

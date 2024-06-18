@@ -26,13 +26,13 @@ export default function BookingForm({ availableTimes, dispatch, submitForm }) {
     };
 
     return (
-        <form onSubmit={handleSubmit} style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}>
-            <label htmlFor="date">Choose date</label>
+        <form onSubmit={handleSubmit}>
+            <h2>Booking Details</h2>
+            <label htmlFor="date">Date</label>
             <input type="date" id="date" value={date} onChange={handleDateChange} />
 
-            <label htmlFor="time">Choose time</label>
+            <label htmlFor="time">Time</label>
             <select id="time" value={time} onChange={e => setTime(e.target.value)}>
-                {/* {console.log("avail", availableTimes)} */}
                 {availableTimes.map(time => (
                     <option key={time}>{time}</option>
                 ))}
@@ -44,17 +44,18 @@ export default function BookingForm({ availableTimes, dispatch, submitForm }) {
                 id="guests"
                 value={guests}
                 min="1"
-                max="10"
+                max="12"
                 onChange={e => setGuests(e.target.value)}
             />
 
             <label htmlFor="occasion">Occasion</label>
             <select id="occasion" value={occasion} onChange={e=>setOccasion(e.target.value)}>
+                <option>Regular</option>
                 <option>Birthday</option>
                 <option>Anniversary</option>
             </select>
 
-            <input type="submit" value="Make Your reservation" aria-label="On Click" />
+            <button type="submit" aria-label="On Click">Reserve</button>
         </form>
     );
 }

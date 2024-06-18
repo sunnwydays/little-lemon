@@ -382,7 +382,6 @@ footer img {
 
   .testimonials > div > div{
     gap: 1rem;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   }
   .testimonial-card {
     width: 14rem;
@@ -480,7 +479,6 @@ footer img {
 
   .testimonials > div > div {
     gap: 1rem;
-    box-shadow: none;
   }
   .testimonials h1 {
     margin: 0 0 1rem 0;
@@ -511,6 +509,36 @@ footer img {
 .booking-page {
   margin: 0 auto;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 2rem;
+  font-size: 24px;
+  font-weight: 600;
+  background-color: rgb(237, 239, 238);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+form h2 {
+  margin: 0.5rem 0 2rem 0;
+}
+
+form select, form input {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+  margin: 0.5rem 0 2rem 0;
+
+}
+
+.booking-page button {
+  margin: 2rem auto 1rem auto;
+
+} 
 
 /* OtherPages */
 .other-page {
