@@ -1,63 +1,51 @@
-import React from 'react';
+import { useState } from 'react';
 
-export default function BookingForm({ state, dispatch, availableTimes, availableTimesDispatch }) {
-    const handleChange = (e) => {
-        const { id, value } = e.target;
-        let actionType = '';
-
-        switch (id) {
-            case 'date':
-                actionType = 'SET_DATE';
-                break;
-            case 'time':
-                actionType = 'SET_TIME';
-                break;
-            case 'numDiners':
-                actionType = 'SET_NUM_DINERS';
-                break;
-            case 'occasion':
-                actionType = 'SET_OCCASION';
-                break;
-            default:
-                return;
-        }
-        dispatch({ type: actionType, payload: value });
+export default function BookingForm({ availableTimes, dispatch, submitForm }) {
+    const [date, setDate] = useState('')
+    const [time, setTime] = useState('')
+    const [guests, setGuests] = useState('')
+    const [occasion, setOccasion] = useState('')
+    
+    const handleDateChange = (e) => {
+        setDate(e.target.value)
+        props.dispatch(e.target.value)
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(state);
+        e.preventDefault()
+        console.log(availableTimes)
+        submitForm(e)
     };
 
     return (
         <form onSubmit={handleSubmit} style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}>
             <label htmlFor="date">Choose date</label>
-            <input type="date" id="date" value={state.date} onChange={handleChange} />
+            <input type="date" id="date" value={date} onChange={handleDateChange} />
 
             <label htmlFor="time">Choose time</label>
-            <select id="time" value={state.time} onChange={handleChange}>
+            <select id="time" value={time} onChange={e => setTime(e.target.value)}>
                 {availableTimes.map(time => (
                     <option key={time}>{time}</option>
                 ))}
 
             </select>
-            <label htmlFor="numDiners">Number of guests</label>
+            <label htmlFor="guests">Number of guests</label>
             <input
                 type="number"
-                id="numDiners"
-                value={state.numDiners}
+                id="guests"
+                value={guests}
                 min="1"
                 max="10"
-                onChange={handleChange}
+                onChange={e => setGuests(e.target.value)}
             />
 
             <label htmlFor="occasion">Occasion</label>
-            <select id="occasion" value={state.occasion} onChange={handleChange}>
+            <select id="occasion" value={occasion} onChange={e=>setOccasion(e.target.value)}>
                 <option>Birthday</option>
                 <option>Anniversary</option>
             </select>
 
-            <input type="submit" value="Make Your reservation" />
+            <input type="submit" value="Make Your reservation" aria-label="On Click" />
         </form>
     );
 }

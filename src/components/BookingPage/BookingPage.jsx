@@ -1,31 +1,7 @@
-import { useReducer } from 'react';
-
 import BookingForm from "./BookingForm"
 import restaurant from '../../assets/restaurant.jpg';
 
 export default function BookingPage(props) {
-    const reducer = (state, action) => {
-        switch (action.type) {
-            case 'SET_DATE':
-                return { ...state, date: action.payload };
-            case 'SET_TIME':
-                return { ...state, time: action.payload };
-            case 'SET_NUM_DINERS':
-                return { ...state, numDiners: action.payload };
-            case 'SET_OCCASION':
-                return { ...state, occasion: action.payload };
-            default:
-                return state;
-        }
-    }
-
-    const [state, dispatch] = useReducer(reducer, {
-        date: '',
-        time: '',
-        numDiners: '',
-        occasion: ' '
-    });
-
     return (
         <div className="booking-page">
             <div className="hero">
@@ -39,10 +15,9 @@ export default function BookingPage(props) {
             </div>
             <div className="content">
                 <BookingForm
-                    state={state}
-                    dispatch={dispatch}
                     availableTimes={props.availableTimes}
-                    availableTimesDispatch={props.dispatch}
+                    dispatch={props.dispatch}
+                    submitForm={props.submitForm}
                 />
                 <p>fname</p>
                 <p>lname</p>
