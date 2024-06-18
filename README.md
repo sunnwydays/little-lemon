@@ -1,5 +1,5 @@
 # Capstone project website
-Made for the Coursera Meta Front-End Developer specialization
+Made for the Coursera Meta Front-End Developer specialization  
 Not using create-react-app because it is deprecated - using Vite instead  
 **npm run dev** to run
 
