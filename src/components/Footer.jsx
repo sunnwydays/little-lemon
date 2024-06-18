@@ -1,11 +1,11 @@
-import image from '../assets/Mario and Adrian new.jpg';
+import image from '../assets/logo-vertical.png';
 
 export default function Footer() {
     return (
         <footer>
             <div className="content">
                 <div>
-                    <img src={image} alt="Mario and Adrian" />
+                    <img src={image} alt="Little Lemon logo icon" />
                 </div>
                 <div>
                     <h3>Navigation</h3>

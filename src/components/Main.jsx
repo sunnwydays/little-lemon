@@ -1,5 +1,5 @@
 import { useReducer } from 'react';
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import HomePage from './HomePage/HomePage';
 import About from './OtherPages/About';
 import Menu from './OtherPages/Menu';
