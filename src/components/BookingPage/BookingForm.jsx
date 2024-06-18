@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; // need this for jest testing or else it says React is not defined
 import PropTypes from 'prop-types';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
@@ -9,7 +9,7 @@ BookingForm.propTypes = {
     submitForm: PropTypes.func
 };
 
-const sum = (a,b) => a + b;
+// const sum = (a, b) => a + b; // example function to test - found issue with testing environment, not me
 
 const bookingValidation = yup.object().shape({
     date: yup.date().min(new Date(), 'You cannot reserve a table for the past!').required('Date is required'),
@@ -29,6 +29,7 @@ export default function BookingForm({ availableTimes, dispatch, submitForm }) {
         validationSchema: bookingValidation,
         onSubmit: (values, { setSubmitting }) => {
             dispatch({ type: 'UPDATE_TIMES', date: new Date(values.date) });
+            console.log(values)
             submitForm(values);
             setSubmitting(false);
         }
@@ -67,7 +68,7 @@ export default function BookingForm({ availableTimes, dispatch, submitForm }) {
                 className={formik.errors.time && formik.touched.time ? 'input-error' : ''}
             >
                 <option></option>
-                {availableTimes.map(time => (
+                {availableTimes && availableTimes.map(time => (
                     <option key={time} value={time}>{time}</option>
                 ))}
             </select>
