@@ -53,6 +53,7 @@ export default function Main() {
     const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
 
     const navigate = useNavigate()
+    
     function submitForm(formData) {
         if (submitAPI(formData)) {
             navigate('/confirmed')

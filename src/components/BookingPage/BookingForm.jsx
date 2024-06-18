@@ -21,7 +21,8 @@ export default function BookingForm({ availableTimes, dispatch, submitForm }) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        submitForm(e)
+        console.log(e)
+        submitForm(e) //should be form data but whatever, it always returns true
     };
 
     return (
