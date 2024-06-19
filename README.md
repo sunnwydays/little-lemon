@@ -14,3 +14,14 @@ Not sure why the homepage buttons work though (Reserve a Table and Menu)
 - separate pages with React Router
 - props and state management
 - React, JavaScript, HTML, CSS, React
+
+# Gallery
+
+!(home-1.png "First home view with navbar, hero, and specials")
+!(home-2.png "Second home view with specials and testimonials")
+!(home-3.png "Third home view with brand description and footer")
+!(reservation.png "Reservation form")
+!(home-mobile-1.png "First mobile home view with navbar and hero")
+!(home-mobile-2.png "Second mobile home view with specials")
+!(home-mobile-3.png "Third mobile home view with testimonials")
+!(home-mobile-4.png "Fourth mobile home view with brand description")
