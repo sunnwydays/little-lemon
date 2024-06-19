@@ -110,3 +110,8 @@ export default function BookingForm({ availableTimes, dispatch, submitForm }) {
         </form>
     );
 }
+/** Accessibility considerations:
+ * use aria labels for things like widgets that don't have DOM text
+ * using htmlFor rather than p allows you to click on the label to select the input
+ * semantic html tags provide meaning through structure
+ */
