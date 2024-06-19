@@ -1,5 +1,5 @@
 **npm run dev** to run  
-On the Github Pages site, access reservations form through the homepage **Reserve a Table** button, not through navbar
+**Reserve a Table** button on homepage to access reservations form if using the Github pages site, not through the navbar
 
 # Capstone project website
 Made for the Coursera Meta Front-End Developer specialization  
