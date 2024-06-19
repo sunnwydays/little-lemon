@@ -69,7 +69,7 @@ export default function Home() {
                 <div className="content">
                     <div>
                         <h1>This week&apos;s specials!</h1>
-                        <Link to="/Menu" style={{ textDecoration: 'none' }}>
+                        <Link to="/little-lemon/menu" style={{ textDecoration: 'none' }}>
                             <button>Online Menu</button>
                         </Link>
                     </div>

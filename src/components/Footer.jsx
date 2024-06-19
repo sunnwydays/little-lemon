@@ -9,12 +9,12 @@ export default function Footer() {
                 </div>
                 <div>
                     <h3>Navigation</h3>
-                    <p><a href="/">Home</a></p>
-                    <p><a href="/about">About</a></p>
-                    <p><a href="/menu">Menu</a></p>
-                    <p><a href="/reservations">Reservations</a></p>
-                    <p><a href="/order-online">Order Online</a></p>
-                    <p><a href="/login">Login</a></p>
+                    <p><a href="/little-lemon/">Home</a></p>
+                    <p><a href="/little-lemon/about">About</a></p>
+                    <p><a href="/little-lemon/menu">Menu</a></p>
+                    <p><a href="/little-lemon/reservations">Reservations</a></p>
+                    <p><a href="/little-lemon/order-online">Order Online</a></p>
+                    <p><a href="/little-lemon/login">Login</a></p>
                 </div>
                 <div>
                     <h3>Contact</h3>

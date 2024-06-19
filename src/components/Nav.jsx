@@ -6,22 +6,22 @@ export default function Nav() {
             <a href="/"><img src={logo} alt="Little Lemon logo" /></a>
             <ul>
                 <li>
-                    <a href="/">Home</a>
+                    <a href="/little-lemon/">Home</a>
                 </li>
                 <li>
-                    <a href="/about">About</a>
+                    <a href="/little-lemon/about">About</a>
                 </li>
                 <li>
-                    <a href="/menu">Menu</a>
+                    <a href="/little-lemon/menu">Menu</a>
                 </li>
                 <li>
-                    <a href="/reservations">Reservations</a>
+                    <a href="/little-lemon/reservations">Reservations</a>
                 </li>
                 <li>
-                    <a href="/order-online">Order Online</a>
+                    <a href="/little-lemon/order-online">Order Online</a>
                 </li>
                 <li>
-                    <a href="/login">Login</a>
+                    <a href="/little-lemon/login">Login</a>
                 </li>
             </ul>
         </nav>

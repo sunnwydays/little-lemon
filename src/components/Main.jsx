@@ -63,14 +63,14 @@ export default function Main() {
     return (
         <main>
             <Routes>
-                <Route path="/" element={<HomePage />} />
+                <Route path="/little-lemon/" element={<HomePage />} />
                 <Route path="*" element={<HomePage />} />
-                <Route path="/reservations" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/menu" element={<Menu />} />
-                <Route path="/order-online" element={<OrderOnline />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/confirmed" element={<ConfirmedBooking />} />
+                <Route path="little-lemon/reservations" element={<BookingPage availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />} />
+                <Route path="/little-lemon/about" element={<About />} />
+                <Route path="/little-lemon/menu" element={<Menu />} />
+                <Route path="/little-lemon/order-online" element={<OrderOnline />} />
+                <Route path="/little-lemon/login" element={<Login />} />
+                <Route path="/little-lemon/confirmed" element={<ConfirmedBooking />} />
             </Routes>
         </main>
     );
